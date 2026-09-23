@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Szkielet zaliczeniowy - Wiktor Brokos 2P</title>
+    <script language="JavaScript">
+        function WinOpen_z3() {
+            window.open("Brok_zad3.html", "okienko_z3", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
+        }
+
+        function WinOpen_z4() {
+            window.open("Brok_zad4_pyt.html", "okienko_z4", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
+        }
+
+        function okno_zamknij() {
+            window.close();
+        }
+
+        document.write("Szkielet zaliczeniowy JavaScript Wiktor Brokos 2P".fontcolor("red"));
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" name="zadanie3" value="zadanie3-Brok" onclick="WinOpen_zad3()">
+        <input type="button" name="zadanie4" value="zadanie4-Brok" onclick="WinOpen_z4()">
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+    </form>
+</body>
+</html>

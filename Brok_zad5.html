@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 5 - Brokos</title>
+    <script type="text/javascript">
+        // Układ 1 zgodnie ze zdjęciem: 
+        // Okna z grafikami ustawione w jednym rzędzie na dole (top=400) obok siebie
+
+        function WinOpen_Brokos_1() {
+            window.open("Brok_zad5_grafika1.html", "okno_g1", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=400,left=50");
+        }
+
+        function WinOpen_Brokos_2() {
+            window.open("Brok_zad5_grafika2.html", "okno_g2", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=400,left=230");
+        }
+
+        function WinOpen_Brokos_3() {
+            window.open("Brok_zad5_grafika3.html", "okno_g3", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=400,left=410");
+        }
+
+        function WinOpen_Brokos_4() {
+            window.open("Brok_zad5_grafika4.html", "okno_g4", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=400,left=590");
+        }
+
+        function okno_zamknij_Brokos_5() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h3>wykonał: Wiktor Brokos, mój numer w dzienniku 1, czyli mam układ (1) mod 4 = 1 układ 1</h3>
+    <form>
+        <input type="button" value="grafika1" onclick="WinOpen_Brokos_1()">
+        <input type="button" value="grafika2" onclick="WinOpen_Brokos_2()">
+        <input type="button" value="grafika3" onclick="WinOpen_Brokos_3()">
+        <input type="button" value="grafika4" onclick="WinOpen_Brokos_4()">
+        <br><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Brokos_5()">
+    </form>
+</body>
+</html>
