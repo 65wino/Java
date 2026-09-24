@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Wykonaj: Brokos Zadanie 6</title>
+</head>
+<body>
+
+
+    <p><b>Rodzaje okienek:</b></p>
+    <p>• Okienko alert – wyświetla okienko dialogowe z informacją i przyciskiem OK.</p>
+    <p>• Okienko prompt – generuje okno, w którym użytkownik może wpisać wartość, a ta wartość jest zwracana następnie do programu.</p>
+    <p>• Okienko confirm – służy do tego, aby użytkownik coś potwierdził (stąd nazwa confirm).</p>
+
+    <p><b>Przy nadawaniu nazw zmiennym należy przestrzegać pewnych zasad:</b></p>
+    <p>1. Nazwa zmiennej musi się zaczynać od litery, znaku <b>$</b> lub <b>_</b>, a nie od cyfry.</p>
+    <p>2. W nazwie można stosować litery, cyfry, znak <b>$</b> oraz <b>_</b>.</p>
+    <p>3. Nie należy używać znaków specjalnych i słów kluczowych JavaScript jako nazw zmiennych.</p>
+    <p>Poprawne nazwy zmiennych: zmienna1, $wynik, _rozmiar, wynik_1</p>
+    <p>Błędne nazwy zmiennych: 1zmienna, wynik rozmiaru, var</p>
+
+    <p><b>Typy zmiennych w JavaScript</b></p>
+    <p>W JavaScript nie ma możliwości definiowania różnych typów zmiennych tak jak w C++, typy zmiennych są definiowane w trakcie ich przypisywania.</p>
+    <p>Podstawowe zmienne liczbowe w JavaScript to:</p>
+    <p><b>Number</b> → Typ liczbowy</p>
+    <p>• zmienne całkowite</p>
+    <p>• zmienne przecinkowe</p>
+    <p><b>String</b> → Typ tekstowy</p>
+    <p><b>Boolean</b> → Typ logiczny</p>
+    <p><b>Null</b> → Pusta wartość</p>
+    <p><b>Undefined</b> → Typ niezidentyfikowany</p>
+    <p><b>Object</b> → Obiekt</p>
+
+    <p><b>Konwersja zmiennych.</b></p>
+    <p>Wczytanie zmiennej z użyciem prompt wykonywane jest jako ciąg znaków, dlatego konieczna jest konwersja z ciągu znaków na wartości liczbowe, aby wykonywać obliczenia.</p>
+
+    <p><b>Przykłady konwersji:</b></p>
+    <p>Number("123") → 123</p>
+    <p>parseInt("12.9") → 12</p>
+    <p>parseFloat("12.9") → 12.9</p>
+
+    <p><b>Podsumowanie:</b></p>
+    <p>prompt zwraca tekst, więc trzeba zamienić go na liczbę przed działaniami arytmetycznymi.</p>
+
+    <hr>
+
+    <p><b>Przykład użycia okienek JavaScript:</b></p>
+    <script>
+        function pokazAlert() {
+            alert("To jest okno alert");
+        }
+
+        function pokazPrompt() {
+            var imie = prompt("Podaj swoje imię:", "Wiktor");
+            if (imie != null) {
+                alert("Cześć, " + imie + "!");
+            }
+        }
+
+        function pokazConfirm() {
+            var decyzja = confirm("Czy chcesz kontynuować?");
+            if (decyzja == true) {
+                alert("Potwierdziłeś");
+            } else {
+                alert("Anulowałeś");
+            }
+        }
+    </script>
+
+    <form>
+        <input type="button" value="alert" onclick="pokazAlert()">
+        <input type="button" value="prompt" onclick="pokazPrompt()">
+        <input type="button" value="confirm" onclick="pokazConfirm()">
+    </form>
+</body>
+</html>
