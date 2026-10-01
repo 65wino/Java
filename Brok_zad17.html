@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Brok_zad17</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 1200px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Pytania i odpowiedzi:</h2>
+
+    <table>
+        <tr>
+            <th>Nr</th>
+            <th>Pytanie</th>
+            <th>Odpowiedź</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>Wymień cztery sposoby wyprowadzania danych w JS.</td>
+            <td>1) document.write(), 2) okienko alert(), 3) okno formularza, 4) do tabeli.</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Czym jest funkcja w JS, omów przy użyciu 4 podpunktów?</td>
+            <td>
+                <ul>
+                    <li>Jest to zbiór zgrupowanych instrukcji, które możemy uruchamiać poprzez podanie ich nazwy.</li>
+                    <li>Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod.</li>
+                    <li>Funkcja może mieć argumenty, które wchodzą do wnętrza funkcji i są tam przetwarzane np. suma_kry(a, b).</li>
+                    <li>Możliwe jest również zwrócenie obliczonej wartości zapisaną po słowie kluczowym return.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Omów metody getElementsByName, getElementById, getElementsByTagName (może być w postaci tabeli).</td>
+            <td>
+                <table border="1" cellpadding="5" cellspacing="0" style="width:100%; margin-top:5px;">
+                    <tr>
+                        <th>Metoda</th>
+                        <th>Opis</th>
+                    </tr>
+                    <tr>
+                        <td>getElementById("id")</td>
+                        <td>zwraca dostęp do elementu o podanym identyfikatorze id</td>
+                    </tr>
+                    <tr>
+                        <td>getElementsByTagName("znacznik")</td>
+                        <td>zwraca zbiór wszystkich elementów danego typu, np. div</td>
+                    </tr>
+                    <tr>
+                        <td>getElementsByName("nazwa")</td>
+                        <td>zwraca zbiór elementów o danej nazwie</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>Omów właściwości innerHTML, innerText, className. (każdą osobno)</td>
+            <td>
+                <ul>
+                    <li><strong>innerHTML</strong> – jest to właściwość, która umożliwia odczyt, zmodyfikowanie, wstawienie albo usunięcie kodu HTML z danego elementu HTML np. w tabeli.</li>
+                    <li><strong>innerText</strong> – umożliwia określenie ciągu znaków, który zostanie umieszczony w elemencie.</li>
+                    <li><strong>className</strong> – umożliwia określenie klasy CSS użytej do prezentacji elementu.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>   
+<head>    
+<title> Użycie fukcji </title>    
+<meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color:navy;font-size:50px;"> 
+<script language="JavaScript"> 
+var a=parseFloat(prompt("a=","")); 
+var b=parseFloat(prompt("b=","")); 
+function suma_bro(a, b) { 
+return a + b; 
+} 
+function roznica_bro(a, b) { 
+return a - b; 
+} 
+function iloczyn_bro(a, b) { 
+return a * b; 
+}
+function iloraz_bro(a, b) { 
+return a / b; 
+}
+function potega_bro(a, b) {
+return Math.pow(a, b);
+}
+document.write("suma="+suma_bro(a,b)+"<br>"); 
+document.write("roznica="+roznica_bro(a,b)+"<br>"); 
+document.write("iloczyn="+iloczyn_bro(a,b)+"<br>"); 
+document.write("iloraz="+iloraz_bro(a,b)+"<br>"); 
+document.write("a^2="+potega_bro(a,2)+"<br>"); 
+document.write("b^2="+potega_bro(b,2)+"<br>"); 
+</script> 
+</div> 
+</body> 
+</html> 
