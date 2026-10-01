@@ -2,7 +2,7 @@
 <html lang="pl-PL">
 <head>
     <meta charset="utf-8">
-    <title>Brok_zad13</title>
+    <title>Brok_zad15</title>
 </head>
 <body>
     <div id="wynik" class="box"></div>
@@ -16,13 +16,10 @@
                 return;
             }
 
-            var a = m + 1;
-            var b = m * a;
+            var a = 2 * m;
 
             document.getElementById("wynik").innerHTML =
-                "1/" + m + " + 1/" + a + " = 1/" + b +
-                "<br><br>" +
-                "Czyli: 1/" + m + " = 1/" + a + " + 1/" + b;
+                "1/" + m + " = 1/" + a + " + 1/" + a;
         }
 
         window.onload = obliczUlamki;

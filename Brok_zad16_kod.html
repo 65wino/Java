@@ -1,0 +1,34 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24">
+      <!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Brok_zad16</title>
+</head>
+<body>
+    <script>
+        var A = parseInt(prompt("Podaj pierwszą liczbę A:"));
+        var B = parseInt(prompt("Podaj drugą liczbę B:"));
+
+        if (isNaN(A) || isNaN(B)) {
+            document.write("Podaj poprawne liczby.");
+        } else {
+            var a3 = A * A * A;
+            var b3 = B * B * B;
+            var wynik = a3 + 3 * A * A * B + 3 * A * B * B + b3;
+
+            document.write("(" + A + " + " + B + ")^3 = " + A + "^3 + 3*(" + A + "^2)*(" + B + ") + 3*(" + A + ")*(" + B + "^2) + " + B + "^3");
+            document.write("<br>");
+            document.write("= " + a3 + " + " + (3 * A * A * B) + " + " + (3 * A * B * B) + " + " + b3);
+            document.write("<br>");
+            document.write("= " + wynik);
+        }
+    </script>
+</body>
+</html>
+
+            </textarea> 
+    </body> 
+</html> 
