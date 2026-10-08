@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Brok_zad20</title>
+</head>
+<body>
+    <h2>Obliczanie długości boków trójkąta</h2>
+
+    A(xa_bro): <input type="text" id="xa_bro"><br>
+    A(ya_bro): <input type="text" id="ya_bro"><br>
+    B(xb_bro): <input type="text" id="xb_bro"><br>
+    B(yb_bro): <input type="text" id="yb_bro"><br>
+    C(xc_bro): <input type="text" id="xc_bro"><br>
+    C(yc_bro): <input type="text" id="yc_bro"><br><br>
+
+    <input type="button" value="Oblicz AB" onclick="AB_bro()">
+    <input type="button" value="Oblicz BC" onclick="BC_bro()">
+    <input type="button" value="Oblicz AC" onclick="AC_bro()"><br><br>
+
+    <div id="wynik">Wpisz współrzędne punktów.</div>
+
+    <script>
+        function AB_bro() {
+            var xa = parseFloat(document.getElementById('xa_bro').value);
+            var ya = parseFloat(document.getElementById('ya_bro').value);
+            var xb = parseFloat(document.getElementById('xb_bro').value);
+            var yb = parseFloat(document.getElementById('yb_bro').value);
+
+            var wynik = Math.sqrt(Math.pow(xa - xb, 2) + Math.pow(ya - yb, 2));
+            document.getElementById('wynik').innerHTML = 'Długość boku AB = ' + wynik.toFixed(2);
+        }
+
+        function BC_bro() {
+            var xb = parseFloat(document.getElementById('xb_bro').value);
+            var yb = parseFloat(document.getElementById('yb_bro').value);
+            var xc = parseFloat(document.getElementById('xc_bro').value);
+            var yc = parseFloat(document.getElementById('yc_bro').value);
+
+            var wynik = Math.sqrt(Math.pow(xb - xc, 2) + Math.pow(yb - yc, 2));
+            document.getElementById('wynik').innerHTML = 'Długość boku BC = ' + wynik.toFixed(2);
+        }
+
+        function AC_bro () {
+            var xa = parseFloat(document.getElementById('xa_bro').value);
+            var ya = parseFloat(document.getElementById('ya_bro').value);
+            var xc = parseFloat(document.getElementById('xc_bro').value);
+            var yc = parseFloat(document.getElementById('yc_bro').value);
+
+            var wynik = Math.sqrt(Math.pow(xa - xc, 2) + Math.pow(ya - yc, 2));
+            document.getElementById('wynik').innerHTML = 'Długość boku AC = ' + wynik.toFixed(2);
+        }
+    </script>
+</body>
+</html>
