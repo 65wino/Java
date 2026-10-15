@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Brok_zad23</title>
+</head>
+<body>
+    <h2>Obliczanie odległości od drabiny i kąta</h2>
+
+    <label for="d_dana">Podaj d = </label>
+    <input type="text" id="d_dana"><br>
+
+    <label for="x_dana">Podaj x = </label>
+    <input type="text" id="x_dana"><br><br>
+
+    <button onclick="oblicz_drabina()">oblicz</button>
+
+    <div class="wynik">
+        <span class="pole">Drabina = <span id="drabina_wynik">0.00</span></span>
+        <span class="pole">Alfa = <span id="alfa_wynik">0.00</span></span>
+    </div>
+
+    <script>
+        function dlugosc_drabiny(d, x) {
+            return Math.sqrt(Math.pow(d, 2) + Math.pow(x, 2));
+        }
+
+        function kat_alfa(d, x) {
+            return Math.atan(d / x) * 180 / Math.PI;
+        }
+
+        function oblicz_drabina() {
+            var d = parseFloat(document.getElementById('d_dana').value);
+            var x = parseFloat(document.getElementById('x_dana').value);
+
+            var drabina = dlugosc_drabiny(d, x);
+            var alfa = kat_alfa(d, x);
+
+            document.getElementById('drabina_wynik').innerHTML = drabina.toFixed(2);
+            document.getElementById('alfa_wynik').innerHTML = alfa.toFixed(2);
+        }
+    </script>
+</body>
+</html>

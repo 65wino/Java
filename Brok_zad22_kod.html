@@ -1,0 +1,45 @@
+<html>
+   <body>
+     <textarea cols="100" rows="40">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Brok_zad22</title>
+</head>
+<body>
+    <h2>Obliczanie pola i obwodu prostokąta</h2>
+
+    <form>
+        a = <input type="text" name="a_dana_bro"><br>
+        b = <input type="text" name="b_dana_bro"><br>
+
+        <input type="button" value="Oblicz pole" onclick="pole_brokski(document.getElementsByName('a_dana_bro')[0].value, document.getElementsByName('b_dana_bro')[0].value)">
+        <input type="button" value="Oblicz obwód" onclick="obwod_brokski(document.getElementsByName('a_dana_bro')[0].value, document.getElementsByName('b_dana_bro')[0].value)"><br><br>
+
+        Pole = <input type="text" name="pole_bro"><br>
+        Obwód = <input type="text" name="obwod_bro"><br>
+    </form>
+
+    <script>
+        function pole_brokski(a_bro, b_bro) {
+            a_bro = parseFloat(a_bro);
+            b_bro = parseFloat(b_bro);
+            var wynik = a_bro * b_bro;
+            document.getElementsByName('pole_bro')[0].value = wynik.toFixed(2);
+            return wynik;
+        }
+
+        function obwod_brokski(a_bro, b_bro) {
+            a_bro = parseFloat(a_bro);
+            b_bro = parseFloat(b_bro);
+            var wynik = 2 * (a_bro + b_bro);
+            document.getElementsByName('obwod_bro')[0].value = wynik.toFixed(2);
+            return wynik;
+        }
+    </script>
+</body>
+</html>
+     </textarea>
+   </body>
+</html>
