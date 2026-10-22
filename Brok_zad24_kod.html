@@ -1,0 +1,54 @@
+<html>
+   <body>
+     <textarea cols="100" rows="40">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Brok_zad24</title>
+</head>
+<body>
+    <h2>Obliczanie z użyciem Math</h2>
+
+    <button onclick="oblicz()">Oblicz</button>
+
+    <div id="wynik"></div>
+
+    <script>
+        function oblicz() {
+            var x1 = parseFloat(prompt("Podaj x1:"));
+            var x2 = parseFloat(prompt("Podaj x2:"));
+
+            var imie = prompt("Podaj imię:");
+            var liczbaLiter = imie.length;
+
+            var x1_rad = x1 * Math.PI / 180;
+
+            var y1 = 3 * Math.pow(x1, liczbaLiter / (liczbaLiter + 2));
+
+            var y2 = 2 * Math.cos(x1_rad) + 3 * Math.sin(x1_rad);
+
+            var y3 = Math.pow(
+                Math.pow(x1, 5) +
+                2 * Math.pow(x2, 4) * Math.abs(x1 - x2)
+            , 1/3);
+
+            var wynik = "Wczytane liczby:<br>";
+            wynik += "x1 = " + x1 + " &nbsp;&nbsp; x2 = " + x2 + "<br><br>";
+
+            wynik += "x1 w stopniach = " + x1 + "<br>";
+            wynik += "x1 w radianach = " + x1_rad.toFixed(2) + "<br><br>";
+
+            wynik += "y1 = " + y1.toFixed(2) + "<br>";
+            wynik += "y2 = " + y2.toFixed(2) + "<br>";
+            wynik += "y3 = " + y3.toFixed(2) + "<br>";
+
+            document.getElementById("wynik").innerHTML = wynik;
+        }
+    </script>
+</body>
+</html>
+
+     </textarea>
+   </body>
+</html>
