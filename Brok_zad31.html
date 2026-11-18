@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        var samochod = {
+            marka: 'Toyota',
+            kolor: 'Czarny',
+            silnik: 'Benzynowy',
+            pokaz: function () {
+                document.write(this.marka + ' ' + 'koloru ' + this.kolor + ' z silnikiem ' + this.silnik);
+            }
+        }
+        samochod.pokaz();
+        samochod.rokProdukcji = 2022;
+        samochod.samochod_wypisz_brokos = function () { alert('Rok produkcji: ' + this.rokProdukcji); }
+        samochod.samochod_wypisz_brokos();
+    </script>
+</head>
+
+<body>
+    <br>
+    Programowanie obiektowe. <br>
+    Obiekt to samochod<br>
+    Pola:<br>
+    marka<br>
+    kolor<br>
+    silnik<br>
+    metoda: pokaz();<br>
+    nowe pole to rokProdukcji <br>
+    nowa metoda to samochod_wypisz_brokos();<br>
+</body>
+
+</html>
