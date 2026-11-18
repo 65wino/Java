@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function samochod(marka_k, kolor_k, silnik_k)
+        {
+            this.silnik = silnik_k;            
+            this.kolor = kolor_k;
+            this.marka = marka_k;
+        }
+        samochod.prototype.wypisz_brokos = function () 
+        {
+            alert(this.marka + ' ' + this.kolor + ' ' + this.silnik);
+        };
+        var samochod1 = new samochod("elektryczny ","czarny", "tesla"); 
+        var samochod2 = new samochod('spalinowy', 'czerwony', 'ferrari');
+        samochod1.wypisz_brokos(); 
+        samochod2.wypisz_brokos();
+        document.write("dostęp do właściwości" + "<br>");
+        document.write("samochod pierwszy" + " " + samochod1.silnik + " " + samochod1.kolor + " " + samochod1.marka);
+    </script>
+</head>
+
+<body>
+    <br>
+    programowanie obiektowe - Wiktor Brokos
+</body>
+
+</html>
