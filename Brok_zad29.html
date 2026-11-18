@@ -79,18 +79,45 @@ var osoba_1 =
             <li>
                 Konstruktor w JS na podstawie przykładu wraz z opisem.
             </h1>
-        </li>
+        </h1>
+        Konstruktor w JavaScript to specjalna funkcja służąca do tworzenia i inicjalizowania wielu obiektów o tej samej strukturze (szablonie). Nazwę funkcji konstruktora zwyczajowo zapisujemy wielką literą. Wewnątrz używamy słowa kluczowego <b>this</b>, aby przypisać wartości do właściwości nowo tworzonego obiektu.<br><br>
+        <textarea style="height: 180px; width: 450px;">
+function Osoba(nazwisko, imie, zawod) {
+    this.nazwisko = nazwisko;
+    this.imie = imie;
+    this.zawod = zawod;
+    this.wyswietl = function() {
+        document.write(this.imie + " " + this.nazwisko);
+    };
+}
+        </textarea>
+        <br><b>Opis:</b> Powyższa funkcja <code>Osoba</code> jest konstruktorem. Przyjmuje trzy parametry i przypisuje je do pól nowego obiektu (<code>this.nazwisko</code> itd.) oraz definiuje metodę <code>wyswietl</code>.
+
         <h1>
             <li>
                 Znaczenie słowa kluczowego New wraz z przykładem
             </h1>
-        </li>
+        </h1>
+        Słowo kluczowe <b>new</b> służy do tworzenia nowej instancji (egzemplarza) obiektu na podstawie funkcji konstruktora lub klasy. Operator ten tworzy pusty obiekt, wiąże z nim słowo kluczowe <b>this</b> wewnątrz konstruktora, wykonuje kod konstruktora i zwraca gotowy obiekt.<br><br>
+        <textarea style="height: 100px; width: 450px;">
+var pracownik1 = new Osoba("Kowalski", "Jan", "piekarz");
+var pracownik2 = new Osoba("Nowak", "Anna", "kierowca");
+        </textarea>
+
         <h1>
             <li>
                 Znaczenie słowa kluczowego prototype wraz z przykładem i opisem ( szczególnie ważny
                 tekst pogrubiony).
             </h1>
-        </li>
+        </h1>
+        Słowo kluczowe <b>prototype</b> pozwala na dodawanie nowych właściwości i metod do istniejącego konstruktora obiektów z zewnątrz. <b>Wszystkie obiekty utworzone za pomocą danego konstruktora dziedziczą właściwości i metody z jego prototypu</b>, co pozwala oszczędzać pamięć (metoda jest zapisana w pamięci tylko raz, a nie kopiowana dla każdego obiektu osobno).<br><br>
+        <textarea style="height: 130px; width: 450px;">
+Osoba.prototype.wiek = 30;
+Osoba.prototype.przedstawSie = function() {
+    document.write("Cześć, jestem " + this.imie);
+};
+        </textarea>
+        <br><b>Opis:</b> Dzięki użyciu <code>Osoba.prototype</code>, każdy obiekt utworzony wcześniej lub później przez <code>new Osoba(...)</code> zyska dostęp do właściwości <code>wiek</code> oraz metody <code>przedstawSie()</code>.
         
         </ol>
     </body>
